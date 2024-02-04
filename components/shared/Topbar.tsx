@@ -1,11 +1,9 @@
-import Link from 'next/link'
-import React from 'react'
-import Image from "next/image"
-import logo from "@/assets/logo.svg"
-import logout from "@/assets/logout.svg"
-import { OrganizationSwitcher, SignedIn, SignOutButton } from '@clerk/nextjs'
-import { dark } from '@clerk/themes'
-export default function Topbar() {
+import { OrganizationSwitcher, SignedIn, SignOutButton } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
+import Image from "next/image";
+import Link from "next/link";
+
+function Topbar() {
   return (
     <nav className='topbar'>
       <Link href='/' className='flex items-center gap-4'>
@@ -19,7 +17,7 @@ export default function Topbar() {
             <SignOutButton>
               <div className='flex cursor-pointer'>
                 <Image
-                  src={logout}
+                  src='/assets/logout.svg'
                   alt='logout'
                   width={24}
                   height={24}
@@ -41,3 +39,5 @@ export default function Topbar() {
     </nav>
   );
 }
+
+export default Topbar;

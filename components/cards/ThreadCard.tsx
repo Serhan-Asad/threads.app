@@ -80,7 +80,7 @@ function ThreadCard({
                 <Link href={`/thread/${id}`}>
                   <Image
                     src='/assets/reply.svg'
-                    alt='heart'
+                    alt='comment'
                     width={24}
                     height={24}
                     className='cursor-pointer object-contain'
